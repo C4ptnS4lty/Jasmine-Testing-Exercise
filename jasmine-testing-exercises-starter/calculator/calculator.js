@@ -47,6 +47,10 @@ function calculateMonthlyPayment(values) {
   let i = (values.rate / 100) / 12;
   let n = values.years * 12;
 
+  if (p == 0 || i == 0 || n == 0){
+    return 0.00;
+  }
+  
   let compound = 1 + i;
 
   let pxi = p * i;
